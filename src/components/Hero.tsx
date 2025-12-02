@@ -19,26 +19,29 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <span className="text-foreground">Darius</span>{" "}
-              <span className="text-primary bg-clip-text">Vlok</span>
-            </h1>
-            <div className="flex items-center justify-center gap-2 text-xl md:text-2xl text-muted-foreground font-mono">
-              <span className="text-primary">{"<"}</span>
-              <span>Junior Full Stack AI Engineer</span>
-              <span className="text-primary">{"/>"}</span>
-            </div>
-          </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left side - Text content */}
+            <div className="text-center md:text-left space-y-8 animate-fade-in">
+              <div className="space-y-4">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                  <span className="text-foreground">Darius</span>{" "}
+                  <span className="text-primary bg-clip-text">Vlok</span>
+                </h1>
+                <div className="flex items-center justify-center md:justify-start gap-2 text-xl md:text-2xl text-muted-foreground font-mono">
+                  <span className="text-primary">{"<"}</span>
+                  <span>Junior Full Stack AI Engineer</span>
+                  <span className="text-primary">{"/>"}</span>
+                </div>
+              </div>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Building enterprise AI solutions with custom agents, workflow orchestration, 
-            and cutting-edge technologies. Specialized in transforming complex systems 
-            into high-performance AI applications.
-          </p>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Building enterprise AI solutions with custom agents, workflow orchestration,
+                and cutting-edge technologies. Specialized in transforming complex systems
+                into high-performance AI applications.
+              </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-mint hover:shadow-lg transition-all"
@@ -46,17 +49,17 @@ export const Hero = () => {
             >
               Get In Touch
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
-              onClick={() => scrollToSection("projects")}
-            >
-              View Projects
-            </Button>
-          </div>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                  onClick={() => scrollToSection("projects")}
+                >
+                  View Projects
+                </Button>
+              </div>
 
-          <div className="flex items-center justify-center gap-6 pt-8">
+              <div className="flex items-center justify-center md:justify-start gap-6 pt-8">
             <a
               href="https://www.linkedin.com/in/darius-vlok/"
               target="_blank"
@@ -79,17 +82,31 @@ export const Hero = () => {
             >
               <Mail className="w-6 h-6" />
             </a>
-            <a
-              href="https://wa.me/27813302747"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              <MessageCircle className="w-6 h-6" />
-            </a>
+                <a
+                  href="https://wa.me/27813302747"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+
+            {/* Right side - Image */}
+            <div className="flex items-center justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="relative w-full max-w-md">
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl" />
+                <img
+                  src="/darius.png"
+                  alt="Darius Vlok - Developer Setup"
+                  className="relative z-10 w-full h-auto rounded-2xl shadow-2xl"
+                />
+              </div>
+            </div>
           </div>
 
-          <div className="pt-12 animate-bounce">
+          <div className="pt-12 animate-bounce text-center">
             <button
               onClick={() => scrollToSection("about")}
               className="text-primary hover:text-primary/80 transition-colors"
